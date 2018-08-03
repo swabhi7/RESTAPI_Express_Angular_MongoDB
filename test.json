@@ -1,0 +1,48 @@
+db.Students.insert(
+{
+  name:"Ron Weasley",
+  house:"Gryffindor",
+  petType:"Owl",
+  petName:"Pigwidgeon",
+  wandDetails:{
+    wood:"ash",
+    core:"unicorn hair",
+    length:"12"
+  },
+  patronus:"jack russel terrier",
+  imageUrl:"https://img.buzzfeed.com/buzzfeed-static/static/2016-03/1/12/campaign_images/webdr05/weasley-is-our-king-2-24774-1456853601-7_dblbig.jpg",
+  description:"The best sidekick in the history of sidekicks"
+})
+
+
+db.Students.insert(
+{
+  name:"Luna Lovegood",
+  house:"Ravenclaw",
+  petType:"Unknown",
+  petName:"Unknown",
+  wandDetails:{
+    wood:"Unknown",
+    core:"Unknown",
+    length:"Unknown"
+  },
+  patronus:"Hare",
+  imageUrl:"https://d2m3klzcmjgreb.cloudfront.net/wp-content/uploads/2016/01/evaaa2.jpg",
+  description:"More than just loony"
+})
+
+
+{
+  "name":"Hermione Granger",
+  "house":"Gryffindor",
+  "petType":"Cat",
+  "petName":"Crookshanks",
+  "wandDetails":{
+    "wood":"vine",
+    "core":"dragon heartstring",
+    "length":"10"
+  },
+  "patronus":"Otter",
+  "imageUrl":"https://imgix.bustle.com/rehost/2016/9/13/33785d76-556f-4ea4-8cf3-10d190897860.png?w=970&h=582&fit=crop&crop=faces&auto=format&q=70",
+  "description":"Smartest witch of her age"
+}
