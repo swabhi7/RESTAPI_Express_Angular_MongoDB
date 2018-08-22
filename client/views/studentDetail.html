@@ -1,4 +1,7 @@
 <div ng-init="getStudent()">
   {{student.name}}<br>
-  {{student.house}}
+  {{student.house}}<br>
+  <a href="#/students/edit/{{student._id}}" class="btn btn-primary">Edit</a>
+  <button class="btn btn-danger" ng-click="deleteStudent()">Delete</button>
+
 </div>

@@ -22,4 +22,32 @@ myApp.controller('StudentsController', ['$scope', '$http', '$location', '$routeP
     });
   };
 
+  $scope.addStudent = function(){
+
+    $http.post('/api/witchesAndWizards/', $scope.student).then(function successCallback(response){
+      window.location.href = '#/';
+    }, function errorCallback(error){
+
+    });
+  };
+
+  $scope.editStudent = function(){
+    //console.log('debug');
+    $http.put('/api/witchesAndWizards/'+ $scope.student._id, $scope.student).then(function successCallback(response){
+      window.location.href = '#/';
+    }, function errorCallback(error){
+
+    });
+  };
+
+  $scope.deleteStudent = function(){
+    //console.log('debug');
+    //alert('hello');
+    $http.delete('/api/witchesAndWizards/'+ $scope.student._id).then(function successCallback(response){
+      window.location.href = '#/';
+    }, function errorCallback(error){
+
+    });
+  };
+
 }]);
