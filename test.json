@@ -1,17 +1,20 @@
-db.Students.insert(
+db.Spells.insert(
 {
-  name:"Ron Weasley",
-  house:"Gryffindor",
-  petType:"Owl",
-  petName:"Pigwidgeon",
-  wandDetails:{
-    wood:"ash",
-    core:"unicorn hair",
-    length:"12"
-  },
-  patronus:"jack russel terrier",
-  imageUrl:"https://img.buzzfeed.com/buzzfeed-static/static/2016-03/1/12/campaign_images/webdr05/weasley-is-our-king-2-24774-1456853601-7_dblbig.jpg",
-  description:"The best sidekick in the history of sidekicks"
+  name:"Alohamora",
+  whatItDoes:"Opens locked doors"
+})
+
+db.Houses.insert({
+  name:"Slytherin",
+  creator:"Salazar Slytherin",
+  traits:"ambitious",
+  location:"dungeons",
+  access:"say the correct password to the potrait",
+  symbol:"snake",
+  colors:"green and silver",
+  ghost:"Bloody Baron",
+  head:"Severus Snape",
+  element:"water"
 })
 
 
