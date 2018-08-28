@@ -1,6 +1,11 @@
 <ul class="list-group" ng-init="getStudents()">
-  <li class="list-group-item" ng-repeat="student in students">
+  <li class="list-group-item" ng-repeat="student in students.students">
     <a href="#/students/details/{{student._id}}">{{student.name}}</a>
     <img class="thumbnail" src="{{student.imageUrl}}" width="20%">
+  </li>
+  Teachers:<br>
+  <li class="list-group-item" ng-repeat="student in students.teachers">
+    <a href="#/students/details/{{student._id}}">{{student.name}}</a>
+    
   </li>
 </ul>

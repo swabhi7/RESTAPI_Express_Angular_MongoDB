@@ -17,6 +17,14 @@ db.Houses.insert({
   element:"water"
 })
 
+db.Teachers.insert({
+  name: "Minerva McGonagal",
+  house: "Gryffindor",
+  teaches: "Transfiguration",
+  description: "Head of Gryffindor house",
+  patronus: "Cat"
+})
+
 
 db.Students.insert(
 {

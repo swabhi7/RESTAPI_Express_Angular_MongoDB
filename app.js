@@ -10,18 +10,34 @@ mongoose.connect('mongodb://localhost/witchesAndWizardsDB');
 var db = mongoose.connection;
 
 Student = require('./models/student');
+Teacher = require('./models/teacher');
 
 app.get('/', function(req, res){
   res.send('Please use - /api/witchesAndWizards');
 });
 
 app.get('/api/witchesAndWizards', function(req, res){
+  var everyone = {};
   Student.getStudents(function(err, students){
     if(err){
       throw err;
     }
-    res.json(students);
+    //console.log(students);
+    everyone.students = students;
   });
+  Teacher.getTeachers(function(err, teachers){
+    if(err){
+      throw err;
+    }
+    //console.log(teachers);
+    everyone.teachers = teachers;
+    //console.log(everyone);
+    //res.json(everyone);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify(everyone, null, 3));
+  });
+
+
 });
 
 app.post('/api/witchesAndWizards', function(req, res){
