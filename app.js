@@ -41,21 +41,47 @@ app.get('/api/witchesAndWizards', function(req, res){
 });
 
 app.post('/api/witchesAndWizards', function(req, res){
-  Student.addStudent(req.body, function(err, student){
-    if(err){
-      throw err;
-    }
-    res.json(student);
-  });
+  if(req.body.petType){
+    Student.addStudent(req.body, function(err, student){
+      if(err){
+        throw err;
+      }
+      res.json(student);
+      console.log('Student added');
+    });
+  }
+  else{
+    Teacher.addTeacher(req.body, function(err, teacher){
+      if(err){
+        throw err;
+      }
+      res.json(teacher);
+      console.log('Teacher added');
+    });
+  }
+
 });
 
 app.put('/api/witchesAndWizards/:_id', function(req, res){
-  Student.updateStudent(req.params._id, req.body, {}, function(err, student){
-    if(err){
-      throw err;
-    }
-    res.json(student);
-  });
+  if(req.body.petType){
+    Student.updateStudent(req.params._id, req.body, {}, function(err, student){
+      if(err){
+        throw err;
+      }
+      res.json(student);
+      console.log('student updated');
+    });
+  }
+  else{
+    Teacher.updateTeacher(req.params._id, req.body, {}, function(err, teacher){
+      if(err){
+        throw err;
+      }
+      res.json(teacher);
+      console.log('teacher updated');
+    });
+  }
+
 });
 
 app.delete('/api/witchesAndWizards/:_id', function(req, res){
